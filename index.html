@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collection Ramadan 1447 - Institut Al Muta'allim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy-deep:#1A2B4A;
+      --navy-main:#2C3E5A;
+      --rose-gold:#D4A574;
+      --rose-gold-light:#E6C896;
+      --beige-warm:#F5F0E8;
+      --cream:#FFFCF7;
+
+      --font-display:'Cormorant Garamond',serif;
+      --font-body:'Lato',sans-serif;
+
+      --shadow: 0 10px 50px rgba(26, 43, 74, 0.15);
+      --shadow-soft: 0 10px 40px rgba(26,43,74,0.10);
+      --radius-xl: 25px;
+      --radius-lg: 18px;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:var(--font-body);
+      background:linear-gradient(135deg,var(--cream),var(--beige-warm));
+      color:#1A1514;
+      line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+
+    .hero{
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
+      padding:4rem 2rem 5.5rem;
+      text-align:center;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::after{
+      content:"☪";
+      position:absolute;
+      font-family:var(--font-display);
+      font-size:18rem;
+      right:-40px;
+      top:-90px;
+      color:rgba(212,165,116,0.06);
+      pointer-events:none;
+    }
+    .logo{
+      font-family:var(--font-display);
+      font-size:1.1rem;
+      color:var(--rose-gold);
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:1rem;
+      position:relative;
+      z-index:1;
+    }
+    .hero h1{
+      font-family:var(--font-display);
+      font-size:3.5rem;
+      margin-bottom:0.75rem;
+      position:relative;
+      z-index:1;
+    }
+    .hero p{
+      font-size:1.15rem;
+      color:var(--beige-warm);
+      position:relative;
+      z-index:1;
+      max-width:780px;
+      margin:0 auto;
+    }
+
+    .countdown-wrap{
+      margin-top:2.2rem;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      gap:0.8rem;
+      position:relative;
+      z-index:1;
+    }
+    .countdown{
+      display:flex;
+      justify-content:center;
+      gap:1.6rem;
+      flex-wrap:wrap;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:999px;
+      padding:1rem 1.2rem;
+      backdrop-filter: blur(8px);
+    }
+    .countdown-item{min-width:90px;text-align:center}
+    .countdown-number{
+      font-family:var(--font-display);
+      font-size:2.3rem;
+      color:var(--rose-gold);
+      font-weight:700;
+      line-height:1.1;
+    }
+    .countdown-label{
+      font-size:0.82rem;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      opacity:0.9;
+    }
+    .countdown-status{
+      font-size:0.95rem;
+      color:rgba(255,255,255,0.92);
+      opacity:0.95;
+      text-align:center;
+    }
+
+    .products{
+      max-width:1200px;
+      margin:-68px auto 0;
+      padding:0 2rem 3.5rem;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:2rem;
+    }
+    .product-card{
+      background:white;
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      position:relative;
+    }
+    .product-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 18px 60px rgba(26, 43, 74, 0.18);
+    }
+    .product-header{
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
+      padding:2.4rem 2rem;
+      text-align:center;
+      color:white;
+    }
+    .product-icon{font-size:3.4rem;margin-bottom:0.7rem}
+    .product-card h2{
+      font-family:var(--font-display);
+      font-size:2rem;
+      margin-bottom:0.3rem;
+    }
+    .product-subtitle{color:var(--rose-gold-light)}
+    .product-body{padding:2rem}
+    .product-price{
+      font-family:var(--font-display);
+      font-size:3rem;
+      color:var(--navy-deep);
+      text-align:center;
+      margin-bottom:1.2rem;
+      font-weight:700;
+      line-height:1.1;
+    }
+    .product-features{list-style:none;margin:1.2rem 0 1.6rem}
+    .product-features li{
+      padding:0.72rem 0;
+      border-bottom:1px solid var(--beige-warm);
+      display:flex;
+      gap:0.9rem;
+      align-items:flex-start;
+    }
+    .product-features li:before{
+      content:'✓';
+      color:var(--rose-gold);
+      font-weight:900;
+      font-size:1.15rem;
+      line-height:1.2;
+      margin-top:0.1rem;
+      flex:0 0 auto;
+    }
+    .badge{
+      background:linear-gradient(135deg,var(--rose-gold),var(--rose-gold-light));
+      color:white;
+      padding:0.5rem 1rem;
+      border-radius:999px;
+      font-size:0.85rem;
+      font-weight:800;
+      position:absolute;
+      top:14px;
+      right:14px;
+      box-shadow:0 8px 18px rgba(212,165,116,0.28);
+    }
+
+    .btn{
+      width:100%;
+      padding:1.15rem 1.6rem;
+      border:none;
+      border-radius:999px;
+      font-family:var(--font-display);
+      font-size:1.15rem;
+      font-weight:700;
+      cursor:pointer;
+      transition:transform 0.2s ease, filter 0.2s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--rose-gold),var(--rose-gold-light));
+      color:white;
+    }
+    .btn-vip{
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
+      color:white;
+    }
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.02)}
+
+    .info{
+      background:white;
+      padding:3.8rem 0;
+      margin-top:0.5rem;
+      box-shadow:var(--shadow-soft);
+    }
+    .info h2{
+      font-family:var(--font-display);
+      font-size:2.5rem;
+      color:var(--navy-deep);
+      text-align:center;
+      margin-bottom:1.4rem;
+    }
+    .info-sub{
+      text-align:center;
+      max-width:900px;
+      margin:0 auto 2.2rem;
+      color:#4b4b4b;
+      padding:0 1rem;
+    }
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:1.4rem;
+      margin-top:1.6rem;
+    }
+    .info-card{
+      border:1px solid rgba(212,165,116,0.25);
+      border-radius:var(--radius-lg);
+      padding:1.4rem 1.4rem;
+      background:linear-gradient(135deg, var(--cream), #fff);
+    }
+    .info-card h3{
+      font-family:var(--font-display);
+      font-size:1.35rem;
+      color:var(--navy-deep);
+      margin-bottom:0.5rem;
+    }
+    .pill{
+      display:inline-block;
+      background:rgba(212,165,116,0.18);
+      border:1px solid rgba(212,165,116,0.25);
+      color:var(--navy-deep);
+      padding:0.35rem 0.65rem;
+      border-radius:999px;
+      font-size:0.85rem;
+      font-weight:700;
+      margin:0.25rem 0.35rem 0 0;
+    }
+
+    .features{
+      background:white;
+      padding:4rem 0;
+      text-align:center;
+    }
+    .features h2{
+      font-family:var(--font-display);
+      font-size:2.5rem;
+      color:var(--navy-deep);
+      margin-bottom:2.6rem;
+    }
+    .features-grid{
+      max-width:1000px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:2rem;
+      padding:0 2rem;
+    }
+    .feature-icon{font-size:3rem;margin-bottom:1rem}
+    .feature-item h3{
+      font-family:var(--font-display);
+      font-size:1.4rem;
+      color:var(--navy-deep);
+      margin-bottom:0.4rem;
+    }
+    .feature-item p{color:#4b4b4b}
+
+    .faq{
+      background:linear-gradient(135deg, var(--cream), var(--beige-warm));
+      padding:4rem 0;
+    }
+    .faq h2{
+      font-family:var(--font-display);
+      font-size:2.5rem;
+      color:var(--navy-deep);
+      text-align:center;
+      margin-bottom:2rem;
+    }
+    .faq-list{
+      max-width:900px;
+      margin:0 auto;
+      padding:0 2rem;
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+    }
+    details{
+      background:white;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(26,43,74,0.08);
+      border:1px solid rgba(212,165,116,0.18);
+      overflow:hidden;
+    }
+    summary{
+      padding:1.2rem 1.2rem;
+      cursor:pointer;
+      list-style:none;
+      font-weight:800;
+      color:var(--navy-deep);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary:after{
+      content:"+";
+      font-family:var(--font-display);
+      font-size:1.8rem;
+      color:var(--rose-gold);
+      line-height:1;
+    }
+    details[open] summary:after{content:"–"}
+    details .answer{
+      padding:0 1.2rem 1.2rem;
+      color:#3d3d3d;
+    }
+
+    .support{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      z-index:999;
+    }
+    .support a{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      background:white;
+      border:1px solid rgba(212,165,116,0.25);
+      box-shadow:0 10px 30px rgba(26,43,74,0.12);
+      padding:0.75rem 0.95rem;
+      border-radius:999px;
+      font-weight:800;
+    }
+    .support .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--rose-gold);
+    }
+
+    .footer{
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
+      color:white;
+      text-align:center;
+      padding:3rem 2rem;
+    }
+    .footer .brand{
+      font-family:var(--font-display);
+      font-size:1.5rem;
+      color:var(--rose-gold);
+      margin-bottom:0.8rem;
+    }
+    .footer p{opacity:0.9}
+    .footer small{opacity:0.7}
+
+    @media (max-width: 768px){
+      .hero{padding:3.2rem 1.2rem 5rem}
+      .hero h1{font-size:2.45rem}
+      .countdown{border-radius:20px}
+      .countdown-item{min-width:84px}
+      .products{grid-template-columns:1fr;padding:0 1.2rem 3rem}
+      .container{padding:0 1.2rem}
+      .features-grid{padding:0 1.2rem}
+      .support a{font-size:0.92rem}
+    }
+  </style>
+</head>
+
+<body>
+<header class="hero">
+  <div class="logo">Institut Al Muta'allim</div>
+  <h1>Collection Ramadan 1447</h1>
+  <p>Des outils spirituels d'excellence pour transformer ton Ramadan — simples, beaux, et pratiques à utiliser au quotidien.</p>
+
+  <div class="countdown-wrap" aria-live="polite">
+    <div class="countdown-status" id="countdownStatus">Compte à rebours vers Ramadan</div>
+    <div class="countdown" role="group" aria-label="Compte à rebours">
+      <div class="countdown-item">
+        <div class="countdown-number" id="days">—</div>
+        <div class="countdown-label">Jours</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="hours">—</div>
+        <div class="countdown-label">Heures</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="minutes">—</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="products" aria-label="Produits Ramadan 1447">
+  <article class="product-card">
+    <div class="badge">Digital</div>
+    <div class="product-header">
+      <div class="product-icon">✨</div>
+      <h2>Kit Spirituel Complet</h2>
+      <p class="product-subtitle">L’essentiel pour ton Ramadan</p>
+    </div>
+    <div class="product-body">
+      <div class="product-price">39,99€</div>
+      <ul class="product-features">
+        <li>Journal interactif 30 jours complet</li>
+        <li>Tracker Coran intelligent (progression + checklist)</li>
+        <li>30 invocations authentiques (arabe + translittération + français)</li>
+        <li>30 méditations guidées (verset + thème)</li>
+        <li>Guide préparation Eid (zakat + sunnah)</li>
+        <li>Sauvegarde automatique sur ton appareil (navigateur)</li>
+        <li>Accès immédiat 24/7 (fichier digital)</li>
+        <li>Mises à jour : nouvelle version envoyée lors des ajouts</li>
+      </ul>
+      <button class="btn btn-primary" onclick="payerPaypal('Kit Spirituel Complet', 39.99)">Accéder maintenant</button>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="badge">Digital</div>
+    <div class="product-header">
+      <div class="product-icon">📖</div>
+      <h2>Livre Tadabbur</h2>
+      <p class="product-subtitle">Lumières du Ramadan</p>
+    </div>
+    <div class="product-body">
+      <div class="product-price">19,99€</div>
+      <ul class="product-features">
+        <li>30 méditations quotidiennes complètes</li>
+        <li>Méthodologie tadabbur détaillée</li>
+        <li>Versets en arabe + français</li>
+        <li>Réflexions approfondies + actions concrètes</li>
+        <li>Format PDF téléchargeable</li>
+        <li>Accessible tous appareils</li>
+        <li>Mises à jour : nouvelle version envoyée lors des ajouts</li>
+      </ul>
+      <button class="btn btn-primary" onclick="payerPaypal('Livre Tadabbur', 19.99)">Télécharger maintenant</button>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="badge">🔥 Meilleure Offre</div>
+    <div class="product-header">
+      <div class="product-icon">👑</div>
+      <h2>Bundle VIP</h2>
+      <p class="product-subtitle">Ramadan d’Excellence</p>
+    </div>
+    <div class="product-body">
+      <div class="product-price">
+        89,99€
+        <div style="text-decoration: line-through; font-size: 1.15rem; color: #999; margin-top: 0.4rem;">120€</div>
+      </div>
+      <ul class="product-features">
+        <li>Kit Complet + Livre Tadabbur</li>
+        <li>Session live privée (1h30)</li>
+        <li>Groupe WhatsApp VIP exclusif</li>
+        <li>3 audios méditations guidées</li>
+        <li>Certificat personnalisé fin Ramadan</li>
+        <li>Support prioritaire 7j/7</li>
+        <li>Mises à jour prioritaires</li>
+      </ul>
+      <button class="btn btn-vip" onclick="payerPaypal('Bundle VIP', 89.99)">Rejoindre le VIP</button>
+    </div>
+  </article>
+</section>
+
+<section class="info" aria-label="Détails livraison et format">
+  <div class="container">
+    <h2>Ce que tu reçois exactement</h2>
+    <p class="info-sub">
+      Pour éviter toute confusion : voici le format précis, comment ça s’utilise, et comment se passe la sauvegarde.
+      Tout est pensé pour être simple, même sur téléphone.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>📦 Format & accès</h3>
+        <p>
+          <span class="pill">Kit Complet</span> fichier <strong>HTML interactif</strong> à ouvrir dans ton navigateur (Chrome conseillé).<br>
+          <span class="pill">Livre Tadabbur</span> fichier <strong>PDF</strong> téléchargeable.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>💾 Sauvegarde automatique</h3>
+        <p>
+          Tes réponses se sauvegardent automatiquement sur <strong>ton appareil</strong> via le navigateur.<br>
+          Astuce : évite le mode “navigation privée”.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>📩 Paiement & livraison</h3>
+        <p>
+          Paiement via <strong>PayPal</strong>.<br>
+          Après paiement : envoie juste une capture / nom + produit choisi pour recevoir l’accès.
+          (WhatsApp ou Email)
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>🆘 Support</h3>
+        <p>
+          WhatsApp : <strong>+213 557 806 430</strong><br>
+          Email : <strong>contact.almutaallim.university@proton.me</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" aria-label="Avantages">
+  <h2>Pourquoi choisir nos outils ?</h2>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-icon">🌍</div>
+      <h3>Accessible partout</h3>
+      <p>Depuis n’importe quel pays. Usage immédiat sur téléphone ou ordinateur.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">💎</div>
+      <h3>Qualité premium</h3>
+      <p>Contenu structuré, clair, orienté action — pour un vrai changement.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">⚡</div>
+      <h3>Simple à utiliser</h3>
+      <p>Pas besoin d’app compliquée : tu ouvres, tu écris, ça sauvegarde.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🧕</div>
+      <h3>Conçu pour les sœurs</h3>
+      <p>Un rythme réaliste et motivant, compatible avec vie de famille.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-label="Questions fréquentes">
+  <div class="container">
+    <h2>FAQ — Questions fréquentes</h2>
+
+    <div class="faq-list">
+      <details>
+        <summary>Comment je paie exactement ?</summary>
+        <div class="answer">
+          Clique sur le bouton du produit, tu arrives sur PayPal.
+          Dans la note du paiement, écris le produit choisi (Kit / Livre / VIP) + ton email.
+        </div>
+      </details>
+
+      <details>
+        <summary>Comment j’ouvre le Kit Complet ?</summary>
+        <div class="answer">
+          Tu reçois un fichier <strong>.html</strong>. Tu cliques dessus et ça s’ouvre dans ton navigateur.
+          Sur téléphone : Chrome est recommandé.
+        </div>
+      </details>
+
+      <details>
+        <summary>La sauvegarde est où exactement ?</summary>
+        <div class="answer">
+          La sauvegarde est locale : elle se fait dans ton navigateur (sur ton appareil).
+          Si tu effaces les données du navigateur, il faudra repartir d’une sauvegarde (si tu en as une).
+        </div>
+      </details>
+
+      <details>
+        <summary>Comment je vous contacte ?</summary>
+        <div class="answer">
+          WhatsApp : <strong>+213 557 806 430</strong><br>
+          Email : <strong>contact.almutaallim.university@proton.me</strong>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="support" aria-label="Support">
+  <a href="https://wa.me/213557806430" target="_blank" rel="noopener">
+    <span class="dot"></span> Support WhatsApp
+  </a>
+  <a href="mailto:contact.almutaallim.university@proton.me">
+    <span class="dot"></span> Support Email
+  </a>
+</div>
+
+<footer class="footer">
+  <div class="brand">Institut Al Muta'allim</div>
+  <p>Tarbiya • Spiritualité • Excellence</p>
+  <p style="margin-top: 0.9rem;"><small>© 2026 Institut Al Muta'allim</small></p>
+</footer>
+
+<script>
+  // === CONFIG ===
+  const RAMADAN_START = new Date('2026-02-18T00:00:00');
+
+  const PAYPAL_LINK = "https://www.paypal.me/Hind1324";
+  const WHATSAPP_LINK = "https://wa.me/213557806430";
+  const EMAIL_SUPPORT = "contact.almutaallim.university@proton.me";
+
+  function pad2(n){ return String(n).padStart(2,'0'); }
+
+  function updateCountdown(){
+    const now = new Date();
+    const diff = RAMADAN_START - now;
+
+    const status = document.getElementById('countdownStatus');
+    const dEl = document.getElementById('days');
+    const hEl = document.getElementById('hours');
+    const mEl = document.getElementById('minutes');
+
+    if (diff <= 0){
+      status.textContent = "🌙 Ramadan a commencé — Qu’Allah accepte !";
+      dEl.textContent = "0";
+      hEl.textContent = "0";
+      mEl.textContent = "0";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+
+    status.textContent = "Compte à rebours vers Ramadan";
+    dEl.textContent = days;
+    hEl.textContent = pad2(hours);
+    mEl.textContent = pad2(minutes);
+  }
+
+  setInterval(updateCountdown, 60 * 1000);
+  updateCountdown();
+
+  function payerPaypal(produit, prix){
+    // Ouvre PayPal
+    window.open(PAYPAL_LINK, "_blank", "noopener");
+
+    // Propose une confirmation simple (WhatsApp ou Email)
+    const msg = encodeURIComponent(
+      `Salam alaykoum, je viens de payer ${prix}€ pour : ${produit}. ` +
+      `Voici mon nom/email utilisé sur PayPal afin de recevoir l’accès.`
+    );
+
+    setTimeout(() => {
+      const ok = confirm(
+        `✅ Paiement PayPal ouvert.\n\n` +
+        `Pour recevoir l’accès rapidement, envoie une confirmation :\n` +
+        `• WhatsApp (recommandé)\n` +
+        `• ou Email\n\n` +
+        `Cliquer "OK" → WhatsApp\nCliquer "Annuler" → Email`
+      );
+
+      if (ok){
+        window.open(`${WHATSAPP_LINK}?text=${msg}`, "_blank", "noopener");
+      } else {
+        window.location.href = `mailto:${EMAIL_SUPPORT}?subject=${encodeURIComponent('Confirmation paiement - ' + produit)}&body=${msg}`;
+      }
+    }, 400);
+  }
+</script>
+</body>
+</html>
