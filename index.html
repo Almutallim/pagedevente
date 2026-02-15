@@ -2,691 +2,654 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collection Ramadan 1447 - Institut Al Muta'allim</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramadan Premium 1447 - Institut Al Muta'allim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Amiri:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  
   <style>
-    :root{
-      --navy-deep:#1A2B4A;
-      --navy-main:#2C3E5A;
-      --rose-gold:#D4A574;
-      --rose-gold-light:#E6C896;
-      --beige-warm:#F5F0E8;
-      --cream:#FFFCF7;
-
-      --font-display:'Cormorant Garamond',serif;
-      --font-body:'Lato',sans-serif;
-
-      --shadow: 0 10px 50px rgba(26, 43, 74, 0.15);
-      --shadow-soft: 0 10px 40px rgba(26,43,74,0.10);
-      --radius-xl: 25px;
-      --radius-lg: 18px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{
-      font-family:var(--font-body);
-      background:linear-gradient(135deg,var(--cream),var(--beige-warm));
-      color:#1A1514;
-      line-height:1.65;
+    
+    :root {
+      --navy-deep: #1A2B4A;
+      --navy-main: #2C3E5A;
+      --beige-light: #F5F0E8;
+      --beige-main: #D4A574;
+      --gold: #C9A261;
+      --white: #FFFFFF;
+      --text-dark: #141214;
     }
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
-
-    .hero{
-      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
-      padding:4rem 2rem 5.5rem;
-      text-align:center;
-      color:white;
-      position:relative;
-      overflow:hidden;
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--beige-light);
+      color: var(--text-dark);
+      line-height: 1.6;
     }
-    .hero::after{
-      content:"☪";
-      position:absolute;
-      font-family:var(--font-display);
-      font-size:18rem;
-      right:-40px;
-      top:-90px;
-      color:rgba(212,165,116,0.06);
-      pointer-events:none;
+    
+    .header {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-main));
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    .logo{
-      font-family:var(--font-display);
-      font-size:1.1rem;
-      color:var(--rose-gold);
-      letter-spacing:3px;
-      text-transform:uppercase;
-      margin-bottom:1rem;
-      position:relative;
-      z-index:1;
+    
+    .header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212,165,116,0.15) 0%, transparent 70%);
+      border-radius: 50%;
     }
-    .hero h1{
-      font-family:var(--font-display);
-      font-size:3.5rem;
-      margin-bottom:0.75rem;
-      position:relative;
-      z-index:1;
+    
+    .header::after {
+      content: "";
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(201,162,97,0.1) 0%, transparent 70%);
+      border-radius: 50%;
     }
-    .hero p{
-      font-size:1.15rem;
-      color:var(--beige-warm);
-      position:relative;
-      z-index:1;
-      max-width:780px;
-      margin:0 auto;
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
     }
-
-    .countdown-wrap{
-      margin-top:2.2rem;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-direction:column;
-      gap:0.8rem;
-      position:relative;
-      z-index:1;
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      color: var(--beige-main);
+      text-transform: uppercase;
     }
-    .countdown{
-      display:flex;
-      justify-content:center;
-      gap:1.6rem;
-      flex-wrap:wrap;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:999px;
-      padding:1rem 1.2rem;
-      backdrop-filter: blur(8px);
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
-    .countdown-item{min-width:90px;text-align:center}
-    .countdown-number{
-      font-family:var(--font-display);
-      font-size:2.3rem;
-      color:var(--rose-gold);
-      font-weight:700;
-      line-height:1.1;
+    
+    .header .subtitle {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      font-weight: 300;
+      margin-bottom: 10px;
     }
-    .countdown-label{
-      font-size:0.82rem;
-      text-transform:uppercase;
-      letter-spacing:2px;
-      opacity:0.9;
+    
+    .header .location {
+      font-size: 1rem;
+      color: var(--beige-main);
+      margin-top: 10px;
     }
-    .countdown-status{
-      font-size:0.95rem;
-      color:rgba(255,255,255,0.92);
-      opacity:0.95;
-      text-align:center;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
-
-    .products{
-      max-width:1200px;
-      margin:-68px auto 0;
-      padding:0 2rem 3.5rem;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:2rem;
+    
+    .intro {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(26,43,74,0.08);
+      margin-bottom: 60px;
+      text-align: center;
+      border-top: 4px solid var(--beige-main);
     }
-    .product-card{
-      background:white;
-      border-radius:var(--radius-xl);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      transition:transform 0.25s ease, box-shadow 0.25s ease;
-      position:relative;
+    
+    .intro h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--navy-deep);
+      font-size: 2.3rem;
+      margin-bottom: 25px;
+      font-weight: 700;
     }
-    .product-card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 18px 60px rgba(26, 43, 74, 0.18);
+    
+    .intro p {
+      font-size: 1.15rem;
+      color: #4A5568;
+      margin-bottom: 15px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .product-header{
-      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
-      padding:2.4rem 2rem;
-      text-align:center;
-      color:white;
+    
+    .warning-box {
+      background: linear-gradient(135deg, #FFF9E6, #FFF3CD);
+      border-left: 5px solid var(--gold);
+      padding: 25px;
+      margin: 40px 0;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(201,162,97,0.15);
     }
-    .product-icon{font-size:3.4rem;margin-bottom:0.7rem}
-    .product-card h2{
-      font-family:var(--font-display);
-      font-size:2rem;
-      margin-bottom:0.3rem;
+    
+    .warning-box strong {
+      color: #856404;
+      display: block;
+      margin-bottom: 12px;
+      font-size: 1.15rem;
     }
-    .product-subtitle{color:var(--rose-gold-light)}
-    .product-body{padding:2rem}
-    .product-price{
-      font-family:var(--font-display);
-      font-size:3rem;
-      color:var(--navy-deep);
-      text-align:center;
-      margin-bottom:1.2rem;
-      font-weight:700;
-      line-height:1.1;
+    
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
     }
-    .product-features{list-style:none;margin:1.2rem 0 1.6rem}
-    .product-features li{
-      padding:0.72rem 0;
-      border-bottom:1px solid var(--beige-warm);
-      display:flex;
-      gap:0.9rem;
-      align-items:flex-start;
+    
+    .product-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(26,43,74,0.08);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(212,165,116,0.2);
     }
-    .product-features li:before{
-      content:'✓';
-      color:var(--rose-gold);
-      font-weight:900;
-      font-size:1.15rem;
-      line-height:1.2;
-      margin-top:0.1rem;
-      flex:0 0 auto;
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(26,43,74,0.15);
+      border-color: var(--beige-main);
     }
-    .badge{
-      background:linear-gradient(135deg,var(--rose-gold),var(--rose-gold-light));
-      color:white;
-      padding:0.5rem 1rem;
-      border-radius:999px;
-      font-size:0.85rem;
-      font-weight:800;
-      position:absolute;
-      top:14px;
-      right:14px;
-      box-shadow:0 8px 18px rgba(212,165,116,0.28);
+    
+    .product-header {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-main));
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
     }
-
-    .btn{
-      width:100%;
-      padding:1.15rem 1.6rem;
-      border:none;
-      border-radius:999px;
-      font-family:var(--font-display);
-      font-size:1.15rem;
-      font-weight:700;
-      cursor:pointer;
-      transition:transform 0.2s ease, filter 0.2s ease;
+    
+    .product-header::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--beige-main), var(--gold));
     }
-    .btn:active{transform:translateY(1px)}
-    .btn-primary{
-      background:linear-gradient(135deg,var(--rose-gold),var(--rose-gold-light));
-      color:white;
+    
+    .product-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      font-weight: 700;
     }
-    .btn-vip{
-      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
-      color:white;
+    
+    .product-header .price {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin: 20px 0;
+      color: var(--beige-main);
+      font-family: 'Playfair Display', serif;
     }
-    .btn:hover{transform:translateY(-2px);filter:brightness(1.02)}
-
-    .info{
-      background:white;
-      padding:3.8rem 0;
-      margin-top:0.5rem;
-      box-shadow:var(--shadow-soft);
+    
+    .product-header .price-note {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      font-weight: 300;
     }
-    .info h2{
-      font-family:var(--font-display);
-      font-size:2.5rem;
-      color:var(--navy-deep);
-      text-align:center;
-      margin-bottom:1.4rem;
+    
+    .product-body {
+      padding: 35px;
     }
-    .info-sub{
-      text-align:center;
-      max-width:900px;
-      margin:0 auto 2.2rem;
-      color:#4b4b4b;
-      padding:0 1rem;
+    
+    .features {
+      list-style: none;
+      margin: 25px 0;
     }
-    .info-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:1.4rem;
-      margin-top:1.6rem;
+    
+    .features li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(212,165,116,0.15);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.98rem;
     }
-    .info-card{
-      border:1px solid rgba(212,165,116,0.25);
-      border-radius:var(--radius-lg);
-      padding:1.4rem 1.4rem;
-      background:linear-gradient(135deg, var(--cream), #fff);
+    
+    .features li:last-child {
+      border-bottom: none;
     }
-    .info-card h3{
-      font-family:var(--font-display);
-      font-size:1.35rem;
-      color:var(--navy-deep);
-      margin-bottom:0.5rem;
+    
+    .features li:before {
+      content: "✓";
+      font-size: 1.3rem;
+      color: var(--beige-main);
+      font-weight: 900;
+      min-width: 20px;
     }
-    .pill{
-      display:inline-block;
-      background:rgba(212,165,116,0.18);
-      border:1px solid rgba(212,165,116,0.25);
-      color:var(--navy-deep);
-      padding:0.35rem 0.65rem;
-      border-radius:999px;
-      font-size:0.85rem;
-      font-weight:700;
-      margin:0.25rem 0.35rem 0 0;
+    
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
     }
-
-    .features{
-      background:white;
-      padding:4rem 0;
-      text-align:center;
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .features h2{
-      font-family:var(--font-display);
-      font-size:2.5rem;
-      color:var(--navy-deep);
-      margin-bottom:2.6rem;
+    
+    .btn-paypal {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-main));
+      color: white;
+      box-shadow: 0 4px 12px rgba(26,43,74,0.2);
+      border: 1px solid rgba(26,43,74,0.3);
     }
-    .features-grid{
-      max-width:1000px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:2rem;
-      padding:0 2rem;
+    
+    .btn-paypal:hover {
+      background: linear-gradient(135deg, var(--navy-main), var(--navy-deep));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(26,43,74,0.3);
     }
-    .feature-icon{font-size:3rem;margin-bottom:1rem}
-    .feature-item h3{
-      font-family:var(--font-display);
-      font-size:1.4rem;
-      color:var(--navy-deep);
-      margin-bottom:0.4rem;
+    
+    .btn-whatsapp {
+      background: linear-gradient(135deg, var(--beige-main), var(--gold));
+      color: var(--navy-deep);
+      box-shadow: 0 4px 12px rgba(212,165,116,0.2);
+      border: 1px solid rgba(212,165,116,0.3);
     }
-    .feature-item p{color:#4b4b4b}
-
-    .faq{
-      background:linear-gradient(135deg, var(--cream), var(--beige-warm));
-      padding:4rem 0;
+    
+    .btn-whatsapp:hover {
+      background: linear-gradient(135deg, var(--gold), var(--beige-main));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(212,165,116,0.3);
     }
-    .faq h2{
-      font-family:var(--font-display);
-      font-size:2.5rem;
-      color:var(--navy-deep);
-      text-align:center;
-      margin-bottom:2rem;
+    
+    .guarantee {
+      background: linear-gradient(135deg, rgba(212,165,116,0.08), rgba(245,240,232,0.9));
+      padding: 50px 40px;
+      border-radius: 20px;
+      margin: 60px 0;
+      text-align: center;
+      border: 1px solid rgba(212,165,116,0.2);
     }
-    .faq-list{
-      max-width:900px;
-      margin:0 auto;
-      padding:0 2rem;
-      display:flex;
-      flex-direction:column;
-      gap:1rem;
+    
+    .guarantee h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--navy-deep);
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      font-weight: 700;
     }
-    details{
-      background:white;
-      border-radius:16px;
-      box-shadow:0 10px 30px rgba(26,43,74,0.08);
-      border:1px solid rgba(212,165,116,0.18);
-      overflow:hidden;
+    
+    .guarantee-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
     }
-    summary{
-      padding:1.2rem 1.2rem;
-      cursor:pointer;
-      list-style:none;
-      font-weight:800;
-      color:var(--navy-deep);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
+    
+    .guarantee-item {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(26,43,74,0.06);
+      border-top: 3px solid var(--beige-main);
+      transition: transform 0.3s ease;
     }
-    summary::-webkit-details-marker{display:none}
-    summary:after{
-      content:"+";
-      font-family:var(--font-display);
-      font-size:1.8rem;
-      color:var(--rose-gold);
-      line-height:1;
+    
+    .guarantee-item:hover {
+      transform: translateY(-5px);
     }
-    details[open] summary:after{content:"–"}
-    details .answer{
-      padding:0 1.2rem 1.2rem;
-      color:#3d3d3d;
+    
+    .guarantee-item h4 {
+      color: var(--navy-deep);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
     }
-
-    .support{
-      position:fixed;
-      right:16px;
-      bottom:16px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      z-index:999;
+    
+    .guarantee-item p {
+      color: #4A5568;
+      font-size: 0.95rem;
     }
-    .support a{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      background:white;
-      border:1px solid rgba(212,165,116,0.25);
-      box-shadow:0 10px 30px rgba(26,43,74,0.12);
-      padding:0.75rem 0.95rem;
-      border-radius:999px;
-      font-weight:800;
+    
+    .contact {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      margin-top: 60px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(26,43,74,0.08);
+      border-top: 4px solid var(--beige-main);
     }
-    .support .dot{
-      width:10px;height:10px;border-radius:50%;
-      background:var(--rose-gold);
+    
+    .contact h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--navy-deep);
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      font-weight: 700;
     }
-
-    .footer{
-      background:linear-gradient(135deg,var(--navy-deep),var(--navy-main));
-      color:white;
-      text-align:center;
-      padding:3rem 2rem;
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
     }
-    .footer .brand{
-      font-family:var(--font-display);
-      font-size:1.5rem;
-      color:var(--rose-gold);
-      margin-bottom:0.8rem;
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      padding: 15px;
+      background: var(--beige-light);
+      border-radius: 10px;
     }
-    .footer p{opacity:0.9}
-    .footer small{opacity:0.7}
-
-    @media (max-width: 768px){
-      .hero{padding:3.2rem 1.2rem 5rem}
-      .hero h1{font-size:2.45rem}
-      .countdown{border-radius:20px}
-      .countdown-item{min-width:84px}
-      .products{grid-template-columns:1fr;padding:0 1.2rem 3rem}
-      .container{padding:0 1.2rem}
-      .features-grid{padding:0 1.2rem}
-      .support a{font-size:0.92rem}
+    
+    .footer {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-main));
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      color: var(--beige-main);
+    }
+    
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .header .subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .products {
+        grid-template-columns: 1fr;
+      }
+      
+      .intro, .guarantee, .contact {
+        padding: 30px 25px;
+      }
+      
+      .intro h2, .guarantee h3, .contact h3 {
+        font-size: 1.8rem;
+      }
+    }
+    
+    .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
   </style>
 </head>
-
 <body>
-<header class="hero">
-  <div class="logo">Institut Al Muta'allim</div>
-  <h1>Collection Ramadan 1447</h1>
-  <p>Des outils spirituels d'excellence pour transformer ton Ramadan — simples, beaux, et pratiques à utiliser au quotidien.</p>
-
-  <div class="countdown-wrap" aria-live="polite">
-    <div class="countdown-status" id="countdownStatus">Compte à rebours vers Ramadan</div>
-    <div class="countdown" role="group" aria-label="Compte à rebours">
-      <div class="countdown-item">
-        <div class="countdown-number" id="days">—</div>
-        <div class="countdown-label">Jours</div>
-      </div>
-      <div class="countdown-item">
-        <div class="countdown-number" id="hours">—</div>
-        <div class="countdown-label">Heures</div>
-      </div>
-      <div class="countdown-item">
-        <div class="countdown-number" id="minutes">—</div>
-        <div class="countdown-label">Minutes</div>
-      </div>
+  <div class="header">
+    <div class="header-content">
+      <div class="logo">Institut Al Muta'allim</div>
+      <h1>🌙 Ramadan Premium 1447</h1>
+      <p class="subtitle">Programme Complet · Compréhension des Salafs Salih</p>
+      <p class="location">📍 Alger, Algérie</p>
     </div>
   </div>
-</header>
-
-<section class="products" aria-label="Produits Ramadan 1447">
-  <article class="product-card">
-    <div class="badge">Digital</div>
-    <div class="product-header">
-      <div class="product-icon">✨</div>
-      <h2>Kit Spirituel Complet</h2>
-      <p class="product-subtitle">L’essentiel pour ton Ramadan</p>
-    </div>
-    <div class="product-body">
-      <div class="product-price">39,99€</div>
-      <ul class="product-features">
-        <li>Journal interactif 30 jours complet</li>
-        <li>Tracker Coran intelligent (progression + checklist)</li>
-        <li>30 invocations authentiques (arabe + translittération + français)</li>
-        <li>30 méditations guidées (verset + thème)</li>
-        <li>Guide préparation Eid (zakat + sunnah)</li>
-        <li>Sauvegarde automatique sur ton appareil (navigateur)</li>
-        <li>Accès immédiat 24/7 (fichier digital)</li>
-        <li>Mises à jour : nouvelle version envoyée lors des ajouts</li>
-      </ul>
-      <button class="btn btn-primary" onclick="payerPaypal('Kit Spirituel Complet', 39.99)">Accéder maintenant</button>
-    </div>
-  </article>
-
-  <article class="product-card">
-    <div class="badge">Digital</div>
-    <div class="product-header">
-      <div class="product-icon">📖</div>
-      <h2>Livre Tadabbur</h2>
-      <p class="product-subtitle">Lumières du Ramadan</p>
-    </div>
-    <div class="product-body">
-      <div class="product-price">19,99€</div>
-      <ul class="product-features">
-        <li>30 méditations quotidiennes complètes</li>
-        <li>Méthodologie tadabbur détaillée</li>
-        <li>Versets en arabe + français</li>
-        <li>Réflexions approfondies + actions concrètes</li>
-        <li>Format PDF téléchargeable</li>
-        <li>Accessible tous appareils</li>
-        <li>Mises à jour : nouvelle version envoyée lors des ajouts</li>
-      </ul>
-      <button class="btn btn-primary" onclick="payerPaypal('Livre Tadabbur', 19.99)">Télécharger maintenant</button>
-    </div>
-  </article>
-
-  <article class="product-card">
-    <div class="badge">🔥 Meilleure Offre</div>
-    <div class="product-header">
-      <div class="product-icon">👑</div>
-      <h2>Bundle VIP</h2>
-      <p class="product-subtitle">Ramadan d’Excellence</p>
-    </div>
-    <div class="product-body">
-      <div class="product-price">
-        89,99€
-        <div style="text-decoration: line-through; font-size: 1.15rem; color: #999; margin-top: 0.4rem;">120€</div>
-      </div>
-      <ul class="product-features">
-        <li>Kit Complet + Livre Tadabbur</li>
-        <li>Session live privée (1h30)</li>
-        <li>Groupe WhatsApp VIP exclusif</li>
-        <li>3 audios méditations guidées</li>
-        <li>Certificat personnalisé fin Ramadan</li>
-        <li>Support prioritaire 7j/7</li>
-        <li>Mises à jour prioritaires</li>
-      </ul>
-      <button class="btn btn-vip" onclick="payerPaypal('Bundle VIP', 89.99)">Rejoindre le VIP</button>
-    </div>
-  </article>
-</section>
-
-<section class="info" aria-label="Détails livraison et format">
+  
   <div class="container">
-    <h2>Ce que tu reçois exactement</h2>
-    <p class="info-sub">
-      Pour éviter toute confusion : voici le format précis, comment ça s’utilise, et comment se passe la sauvegarde.
-      Tout est pensé pour être simple, même sur téléphone.
+    <div class="intro">
+      <h2>Un Ramadan Structuré, Profond & Authentique</h2>
+      <p>L'Institut Al Muta'allim vous présente ses programmes interactifs 100% conformes à la compréhension des salafs salih.</p>
+      <p><strong>Compatible téléphone, tablette et ordinateur</strong> · Utilisable hors ligne</p>
+      
+      <div class="warning-box">
+        <strong>⚠️ Contenu en validation auprès d'un savant reconnu</strong>
+        Uniquement du'a authentiques (Bukhari, Muslim, Abu Dawud) · Aucune bid'a · Méthodologie des salafs salih
+      </div>
+    </div>
+    
+    <div class="products">
+      <!-- PRODUIT 1 : ADULTES -->
+      <div class="product-card">
+        <div class="product-header">
+          <h3>📖 Programme Adultes</h3>
+          <div class="price">19,99€</div>
+          <div class="price-note">Fichier HTML interactif</div>
+        </div>
+        <div class="product-body">
+          <ul class="features">
+            <li>30 jours tadabbur guidé</li>
+            <li>13 onglets thématiques complets</li>
+            <li>Menstrues, Grossesse, Couple</li>
+            <li>Travail & Ramadan</li>
+            <li>Organisation maison</li>
+            <li>Du'a & Adhkar authentiques</li>
+            <li>Qiyam al-Layl détaillé</li>
+            <li>Zakat & Laylat al-Qadr</li>
+            <li>Formation Tarbiya (contact)</li>
+          </ul>
+          
+          <div class="btn-container">
+            <!-- BOUTON PAYPAL ADULTES -->
+            <a href="https://www.paypal.com/paypalme/Hind1324/19.99" class="btn btn-paypal" target="_blank">
+              💳 Payer par PayPal (19,99€)
+            </a>
+            
+            <!-- BOUTON WHATSAPP ADULTES -->
+            <a href="https://api.whatsapp.com/send/?phone=213557806430&text=السلام%20عليكم%0AJe%20souhaite%20commander%20le%20*Ramadan%20Premium%20Adultes%201447*%20(19,99€)&type=phone_number&app_absent=0" 
+               class="btn btn-whatsapp" target="_blank">
+              💬 Commander via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PRODUIT 2 : ADOS FILLES -->
+      <div class="product-card">
+        <div class="product-header">
+          <h3>👧 Programme Ados Filles</h3>
+          <div class="price">21,99€</div>
+          <div class="price-note">10-18 ans · Contenu complet</div>
+        </div>
+        <div class="product-body">
+          <ul class="features">
+            <li>30 histoires des prophètes authentiques</li>
+            <li>30 jours tadabbur adapté ados</li>
+            <li>13 onglets thématiques complets</li>
+            <li>École & Études pendant Ramadan</li>
+            <li>Famille & Parents</li>
+            <li>Puberté & Mon Corps (fiqh)</li>
+            <li>Amitié & Relations</li>
+            <li>Orientation & Avenir</li>
+            <li>Design spécial filles</li>
+          </ul>
+          
+          <div class="btn-container">
+            <!-- BOUTON PAYPAL ADOS FILLES -->
+            <a href="https://www.paypal.com/paypalme/Hind1324/21.99" class="btn btn-paypal" target="_blank">
+              💳 Payer par PayPal (21,99€)
+            </a>
+            
+            <!-- BOUTON WHATSAPP ADOS FILLES -->
+            <a href="https://api.whatsapp.com/send/?phone=213557806430&text=السلام%20عليكم%0AJe%20souhaite%20commander%20le%20*Ramadan%20Premium%20Ados%20Filles%201447*%20(21,99€)&type=phone_number&app_absent=0" 
+               class="btn btn-whatsapp" target="_blank">
+              💬 Commander via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PRODUIT 3 : ADOS GARÇONS -->
+      <div class="product-card">
+        <div class="product-header">
+          <h3>👦 Programme Ados Garçons</h3>
+          <div class="price">21,99€</div>
+          <div class="price-note">10-18 ans · Contenu complet</div>
+        </div>
+        <div class="product-body">
+          <ul class="features">
+            <li>30 histoires des prophètes authentiques</li>
+            <li>30 jours tadabbur adapté ados</li>
+            <li>13 onglets thématiques complets</li>
+            <li>École & Études pendant Ramadan</li>
+            <li>Famille & Parents</li>
+            <li>Puberté & Mon Corps (fiqh)</li>
+            <li>Amitié & Relations</li>
+            <li>Orientation & Avenir</li>
+            <li>Design spécial garçons</li>
+          </ul>
+          
+          <div class="btn-container">
+            <!-- BOUTON PAYPAL ADOS GARÇONS -->
+            <a href="https://www.paypal.com/paypalme/Hind1324/21.99" class="btn btn-paypal" target="_blank">
+              💳 Payer par PayPal (21,99€)
+            </a>
+            
+            <!-- BOUTON WHATSAPP ADOS GARÇONS -->
+            <a href="https://api.whatsapp.com/send/?phone=213557806430&text=السلام%20عليكم%0AJe%20souhaite%20commander%20le%20*Ramadan%20Premium%20Ados%20Garçons%201447*%20(21,99€)&type=phone_number&app_absent=0" 
+               class="btn btn-whatsapp" target="_blank">
+              💬 Commander via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PRODUIT 4 : PACK FAMILLE -->
+      <div class="product-card">
+        <div class="product-header">
+          <h3>👨‍👩‍👧‍👦 Pack Famille Complet</h3>
+          <div class="price">59,99€</div>
+          <div class="price-note">Au lieu de 63,97€</div>
+          <div class="badge">Économisez 4€</div>
+        </div>
+        <div class="product-body">
+          <ul class="features">
+            <li><strong>Les 3 programmes inclus</strong></li>
+            <li>Programme Adultes (19,99€)</li>
+            <li>Programme Ados Filles (21,99€)</li>
+            <li>Programme Ados Garçons (21,99€)</li>
+            <li><strong>+ BONUS EXCLUSIF</strong></li>
+            <li>3 Fiches Tadabbur PRO imprimables</li>
+            <li>Livraison immédiate par email</li>
+            <li>Support prioritaire inclus</li>
+          </ul>
+          
+          <div class="btn-container">
+            <!-- BOUTON PAYPAL PACK -->
+            <a href="https://www.paypal.com/paypalme/Hind1324/59.99" class="btn btn-paypal" target="_blank">
+              💳 Payer par PayPal (59,99€)
+            </a>
+            
+            <!-- BOUTON WHATSAPP PACK -->
+            <a href="https://api.whatsapp.com/send/?phone=213557806430&text=السلام%20عليكم%0AJe%20souhaite%20commander%20le%20*Pack%20Famille%20Complet%201447*%20(59,99€)&type=phone_number&app_absent=0" 
+               class="btn btn-whatsapp" target="_blank">
+              💬 Commander via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="guarantee">
+      <h3>✅ Nos Garanties</h3>
+      <div class="guarantee-items">
+        <div class="guarantee-item">
+          <h4>📋 100% Conforme</h4>
+          <p>Contenu validé par savant reconnu · Aucune bid'a · Du'a authentiques uniquement (Bukhari, Muslim, Abu Dawud) · Compréhension des salafs salih</p>
+        </div>
+        <div class="guarantee-item">
+          <h4>📱 Multi-Support</h4>
+          <p>Fonctionne sur téléphone, tablette et ordinateur · Compatible tous systèmes · Utilisable hors ligne</p>
+        </div>
+        <div class="guarantee-item">
+          <h4>⚡ Livraison Immédiate</h4>
+          <p>Fichiers envoyés par email dans les 24h maximum après réception du paiement</p>
+        </div>
+        <div class="guarantee-item">
+          <h4>🔒 Paiement Sécurisé</h4>
+          <p>PayPal ou WhatsApp · Vos données bancaires sont protégées · Aucun stockage de carte</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact">
+      <h3>📞 Besoin d'Aide ?</h3>
+      <p style="margin-bottom: 30px; color: #6c757d;">Notre équipe est à votre disposition pour toute question</p>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <strong>📧 Email :</strong> contact.almutaallim.university@proton.me
+        </div>
+        <div class="contact-item">
+          <strong>📱 WhatsApp :</strong> +213 557 80 64 30
+        </div>
+        <div class="contact-item">
+          <strong>👩‍💼 Directrice & Fondatrice :</strong> +213 557 80 64 30
+        </div>
+      </div>
+      
+      <p style="margin-top: 35px; color: #6c757d; font-size: 0.95rem;">
+        <strong>Horaires de réponse :</strong><br>
+        Dimanche - Jeudi : 9h00 - 17h00 (Heure d'Alger)<br>
+        Réponse garantie sous 24-48h maximum
+      </p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="footer-logo">Institut Al Muta'allim</div>
+    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+      <strong>© 2026 Institut Al Muta'allim - Tous droits réservés</strong>
     </p>
-
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>📦 Format & accès</h3>
-        <p>
-          <span class="pill">Kit Complet</span> fichier <strong>HTML interactif</strong> à ouvrir dans ton navigateur (Chrome conseillé).<br>
-          <span class="pill">Livre Tadabbur</span> fichier <strong>PDF</strong> téléchargeable.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>💾 Sauvegarde automatique</h3>
-        <p>
-          Tes réponses se sauvegardent automatiquement sur <strong>ton appareil</strong> via le navigateur.<br>
-          Astuce : évite le mode “navigation privée”.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>📩 Paiement & livraison</h3>
-        <p>
-          Paiement via <strong>PayPal</strong>.<br>
-          Après paiement : envoie juste une capture / nom + produit choisi pour recevoir l’accès.
-          (WhatsApp ou Email)
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>🆘 Support</h3>
-        <p>
-          WhatsApp : <strong>+213 557 806 430</strong><br>
-          Email : <strong>contact.almutaallim.university@proton.me</strong>
-        </p>
-      </div>
-    </div>
+    <p style="margin-bottom: 5px;">Alger, Algérie</p>
+    <p style="margin-top: 25px; font-size: 0.95rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Fondé par une étudiante en 3ème année à l'Université Islamique de Riyadh (sous Sheikh Al Mushin)
+    </p>
+    <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+      Enseignement religieux pour femmes · Méthodologie des salafs salih
+    </p>
   </div>
-</section>
-
-<section class="features" aria-label="Avantages">
-  <h2>Pourquoi choisir nos outils ?</h2>
-  <div class="features-grid">
-    <div class="feature-item">
-      <div class="feature-icon">🌍</div>
-      <h3>Accessible partout</h3>
-      <p>Depuis n’importe quel pays. Usage immédiat sur téléphone ou ordinateur.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">💎</div>
-      <h3>Qualité premium</h3>
-      <p>Contenu structuré, clair, orienté action — pour un vrai changement.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">⚡</div>
-      <h3>Simple à utiliser</h3>
-      <p>Pas besoin d’app compliquée : tu ouvres, tu écris, ça sauvegarde.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">🧕</div>
-      <h3>Conçu pour les sœurs</h3>
-      <p>Un rythme réaliste et motivant, compatible avec vie de famille.</p>
-    </div>
-  </div>
-</section>
-
-<section class="faq" aria-label="Questions fréquentes">
-  <div class="container">
-    <h2>FAQ — Questions fréquentes</h2>
-
-    <div class="faq-list">
-      <details>
-        <summary>Comment je paie exactement ?</summary>
-        <div class="answer">
-          Clique sur le bouton du produit, tu arrives sur PayPal.
-          Dans la note du paiement, écris le produit choisi (Kit / Livre / VIP) + ton email.
-        </div>
-      </details>
-
-      <details>
-        <summary>Comment j’ouvre le Kit Complet ?</summary>
-        <div class="answer">
-          Tu reçois un fichier <strong>.html</strong>. Tu cliques dessus et ça s’ouvre dans ton navigateur.
-          Sur téléphone : Chrome est recommandé.
-        </div>
-      </details>
-
-      <details>
-        <summary>La sauvegarde est où exactement ?</summary>
-        <div class="answer">
-          La sauvegarde est locale : elle se fait dans ton navigateur (sur ton appareil).
-          Si tu effaces les données du navigateur, il faudra repartir d’une sauvegarde (si tu en as une).
-        </div>
-      </details>
-
-      <details>
-        <summary>Comment je vous contacte ?</summary>
-        <div class="answer">
-          WhatsApp : <strong>+213 557 806 430</strong><br>
-          Email : <strong>contact.almutaallim.university@proton.me</strong>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<div class="support" aria-label="Support">
-  <a href="https://wa.me/213557806430" target="_blank" rel="noopener">
-    <span class="dot"></span> Support WhatsApp
-  </a>
-  <a href="mailto:contact.almutaallim.university@proton.me">
-    <span class="dot"></span> Support Email
-  </a>
-</div>
-
-<footer class="footer">
-  <div class="brand">Institut Al Muta'allim</div>
-  <p>Tarbiya • Spiritualité • Excellence</p>
-  <p style="margin-top: 0.9rem;"><small>© 2026 Institut Al Muta'allim</small></p>
-</footer>
-
-<script>
-  // === CONFIG ===
-  const RAMADAN_START = new Date('2026-02-18T00:00:00');
-
-  const PAYPAL_LINK = "https://www.paypal.me/Hind1324";
-  const WHATSAPP_LINK = "https://wa.me/213557806430";
-  const EMAIL_SUPPORT = "contact.almutaallim.university@proton.me";
-
-  function pad2(n){ return String(n).padStart(2,'0'); }
-
-  function updateCountdown(){
-    const now = new Date();
-    const diff = RAMADAN_START - now;
-
-    const status = document.getElementById('countdownStatus');
-    const dEl = document.getElementById('days');
-    const hEl = document.getElementById('hours');
-    const mEl = document.getElementById('minutes');
-
-    if (diff <= 0){
-      status.textContent = "🌙 Ramadan a commencé — Qu’Allah accepte !";
-      dEl.textContent = "0";
-      hEl.textContent = "0";
-      mEl.textContent = "0";
-      return;
-    }
-
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
-
-    status.textContent = "Compte à rebours vers Ramadan";
-    dEl.textContent = days;
-    hEl.textContent = pad2(hours);
-    mEl.textContent = pad2(minutes);
-  }
-
-  setInterval(updateCountdown, 60 * 1000);
-  updateCountdown();
-
-  function payerPaypal(produit, prix){
-    // Ouvre PayPal
-    window.open(PAYPAL_LINK, "_blank", "noopener");
-
-    // Propose une confirmation simple (WhatsApp ou Email)
-    const msg = encodeURIComponent(
-      `Salam alaykoum, je viens de payer ${prix}€ pour : ${produit}. ` +
-      `Voici mon nom/email utilisé sur PayPal afin de recevoir l’accès.`
-    );
-
-    setTimeout(() => {
-      const ok = confirm(
-        `✅ Paiement PayPal ouvert.\n\n` +
-        `Pour recevoir l’accès rapidement, envoie une confirmation :\n` +
-        `• WhatsApp (recommandé)\n` +
-        `• ou Email\n\n` +
-        `Cliquer "OK" → WhatsApp\nCliquer "Annuler" → Email`
-      );
-
-      if (ok){
-        window.open(`${WHATSAPP_LINK}?text=${msg}`, "_blank", "noopener");
-      } else {
-        window.location.href = `mailto:${EMAIL_SUPPORT}?subject=${encodeURIComponent('Confirmation paiement - ' + produit)}&body=${msg}`;
-      }
-    }, 400);
-  }
-</script>
 </body>
 </html>
+
